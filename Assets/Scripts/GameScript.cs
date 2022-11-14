@@ -25,7 +25,7 @@ public class GameScript : MonoBehaviour
     void Update()
     {
 
-        MoneyText.text = Money.ToString("C2");
+        MoneyText.text = Money.ToString("Year");
         TimerText.text = Timer.ToString("0.0");
 
         if (StartTimer == 1)
