@@ -11,11 +11,13 @@ public class Level : MonoBehaviour
 
     public GameObject[] News;
     public GameObject FailSucUI;
+    public GameObject DecisionMaking;
     public TextMeshProUGUI SucFail;
     public int currentYear = 1;
     public int CollectedMoney;
     public Button startYear;
     public Button nextYear;
+    public Button Continue;
     public Slider Cuppuccino;
     public Slider SpendingOnPromotion;
     public Slider SalaryEmployee;
@@ -42,7 +44,15 @@ public class Level : MonoBehaviour
         {
             currentYear++;
             News[currentYear - 1].gameObject.SetActive(true);
+            Continue.gameObject.SetActive(true);
             FailSucUI.gameObject.SetActive(false);
+        });
+
+        Continue.onClick.AddListener(() =>
+        {
+            News[currentYear - 1].gameObject.SetActive(false);
+            DecisionMaking.gameObject.SetActive(true);
+            Continue.gameObject.SetActive(false);
         });
     }
 

@@ -17,6 +17,6 @@ public class SliderValue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        value.text = myValue.value.ToString();  
+        value.text = "$" + myValue.value.ToString();  
     } 
 }
