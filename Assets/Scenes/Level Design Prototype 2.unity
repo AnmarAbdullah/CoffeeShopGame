@@ -1326,8 +1326,8 @@ MonoBehaviour:
   Money: 0
   MoneyAdded: 400
   StartTimer: 1
-  Timer: 6
-  TimeReset: 6
+  Timer: 1200
+  TimeReset: 1200
   MoneyText: {fileID: 241627740}
   TimerText: {fileID: 1857065548}
 --- !u!4 &959885651
