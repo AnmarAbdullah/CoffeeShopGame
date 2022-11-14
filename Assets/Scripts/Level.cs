@@ -1,29 +1,33 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-
-    public int TargetMoney;
-
+    [Header("General UI")]
     public GameObject[] News;
     public GameObject FailSucUI;
     public GameObject DecisionMaking;
+
     public TextMeshProUGUI SucFail;
     public int currentYear = 1;
     public int CollectedMoney;
+    
+    [Header("Buttons")]
     public Button startYear;
     public Button nextYear;
     public Button Continue;
+    [Header("Sliders")]
     public Slider Cuppuccino;
     public Slider SpendingOnPromotion;
     public Slider SalaryEmployee;
     public Slider Trainingspending;
 
-    bool yearEnded;
+    int Successes;
+    int index;
+    public int TargetMoney;
+    int random;
 
     void Start()
     {
@@ -43,14 +47,27 @@ public class Level : MonoBehaviour
         nextYear.onClick.AddListener(() =>
         {
             currentYear++;
-            News[currentYear - 1].gameObject.SetActive(true);
+            random = Random.Range(0, News.Length);
+            if (currentYear > 6)
+            {
+                News[random].gameObject.SetActive(true);
+            }
+            else News[currentYear - 1].gameObject.SetActive(true);
             Continue.gameObject.SetActive(true);
             FailSucUI.gameObject.SetActive(false);
+            if (Successes >= 3)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
         });
 
         Continue.onClick.AddListener(() =>
         {
-            News[currentYear - 1].gameObject.SetActive(false);
+            if(currentYear > 6)
+            {
+                News[random].gameObject.SetActive(false);
+            }
+            else News[currentYear - 1].gameObject.SetActive(false);
             DecisionMaking.gameObject.SetActive(true);
             Continue.gameObject.SetActive(false);
         });
@@ -69,17 +86,14 @@ public class Level : MonoBehaviour
     public void Success()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Succeeded"; 
+        SucFail.text = "Succeeded";
+        Successes += 1;
     }
 
     public void Failed()
     {
         FailSucUI.gameObject.SetActive(true);
         SucFail.text = "Failed";
-    }
-
-    public void nextLevel()
-    {
-
+        Successes = 0;
     }
 }
