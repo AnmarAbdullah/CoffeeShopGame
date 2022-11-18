@@ -12,17 +12,15 @@ public class Level : MonoBehaviour
 
     public TextMeshProUGUI SucFail;
     public int currentYear = 1;
-    public int CollectedMoney;
+    public float CollectedMoney;
     
     [Header("Buttons")]
     public Button startYear;
     public Button nextYear;
     public Button Continue;
+    
     [Header("Sliders")]
-    public Slider Cuppuccino;
-    public Slider SpendingOnPromotion;
-    public Slider SalaryEmployee;
-    public Slider Trainingspending;
+    public Slider[] sliders;
 
     int Successes;
     int index;
@@ -33,7 +31,9 @@ public class Level : MonoBehaviour
     {
         startYear.onClick.AddListener(() =>
         {
-            CollectedMoney = algorithm((int)Cuppuccino.value, (int)SpendingOnPromotion.value, (int)SalaryEmployee.value, (int)Trainingspending.value);
+            //CollectedMoney = algorithm((int)Cuppuccino.value, (int)SpendingOnPromotion.value, (int)SalaryEmployee.value, (int)Trainingspending.value);
+            CollectedMoney = algorithm(sliders);
+            Debug.Log(CollectedMoney);
             if (CollectedMoney >= TargetMoney)
             {
                 Success();
@@ -78,10 +78,28 @@ public class Level : MonoBehaviour
 
     }
 
-    public int algorithm(int cuppuccinoPrice, int spendingOnPromo, int EmployeeSalary, int TrainSpending)
+    public float algorithm(Slider[] test)
+    {
+        float result = 0;
+        for (int i = 0; i < test.Length; i++)
+        {    
+            float current = test[i].value;
+            if (i < test.Length - 1)
+            {
+                float currentResult = current * test[i + 1].value;
+                result += currentResult;
+            }
+            else
+            {
+                result = current * test[i].value;
+            }
+        }
+        return result * 10;
+    }
+    /*public int algorithm(int cuppuccinoPrice, int spendingOnPromo, int EmployeeSalary, int TrainSpending)
     {
         return cuppuccinoPrice * spendingOnPromo * EmployeeSalary * TrainSpending;
-    }
+    }*/
 
     public void Success()
     {
