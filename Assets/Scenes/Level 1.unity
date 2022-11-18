@@ -7876,10 +7876,11 @@ MonoBehaviour:
   startYear: {fileID: 1536119387}
   nextYear: {fileID: 1835780352}
   Continue: {fileID: 456143259}
-  Cuppuccino: {fileID: 1814200143}
-  SpendingOnPromotion: {fileID: 73410107}
-  SalaryEmployee: {fileID: 540415515}
-  Trainingspending: {fileID: 1581208602}
+  sliders:
+  - {fileID: 1814200143}
+  - {fileID: 540415515}
+  - {fileID: 73410107}
+  - {fileID: 1581208602}
   TargetMoney: 1500
 --- !u!4 &1052657828
 Transform:
