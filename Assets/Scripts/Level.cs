@@ -8,7 +8,8 @@ public class Level : MonoBehaviour
     [Header("General UI")]
     public GameObject[] News;
     public GameObject FailSucUI;
-    public GameObject[] stars;
+    public GameObject[] customerStars;
+    public GameObject[] employeeStars;
     public GameObject DecisionMaking;
 
     public TextMeshProUGUI SucFail;
@@ -34,10 +35,10 @@ public class Level : MonoBehaviour
         {
             //CollectedMoney = algorithm((int)Cuppuccino.value, (int)SpendingOnPromotion.value, (int)SalaryEmployee.value, (int)Trainingspending.value);
             CollectedMoney = algorithm(sliders);
-            int starRate = Random.Range(0, stars.Length);
+            int starRate = Random.Range(0, employeeStars.Length);
             for (int i = 0; i < starRate; i++)
             {
-                stars[i].SetActive(true);
+                employeeStars[i].SetActive(true);
             }
             Debug.Log(CollectedMoney);
             if (CollectedMoney >= TargetMoney)
@@ -110,14 +111,14 @@ public class Level : MonoBehaviour
     public void Success()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Succeeded";
+        SucFail.text = "Profit Made: " + CollectedMoney;
         Successes += 1;
     }
 
     public void Failed()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Failed";
+        SucFail.text = "Profit Made: " + CollectedMoney;
         Successes = 0;
     }
 }
