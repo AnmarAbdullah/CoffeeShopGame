@@ -3,30 +3,36 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+[Serielizable]
 public class Level : MonoBehaviour
 {
     [Header("General UI")]
-    public GameObject[] News;
-    public GameObject FailSucUI;
-    public GameObject[] customerStars;
-    public GameObject[] employeeStars;
-    public GameObject DecisionMaking;
+    [SerializeField] GameObject[] News;
+    [SerializeField] GameObject FailSucUI;
+    [SerializeField] GameObject[] customerStars;
+    [SerializeField] GameObject[] employeeStars;
+    [SerializeField] GameObject DecisionMaking;
+    [SerializeField] GameObject NextLevel;
 
-    public TextMeshProUGUI SucFail;
-    public int currentYear = 1;
-    public float CollectedMoney;
+    [SerializeField] TextMeshProUGUI SucFail;
+    [SerializeField] int currentYear = 1;
+    [SerializeField] float CollectedMoney;
     
     [Header("Buttons")]
-    public Button startYear;
-    public Button nextYear;
-    public Button Continue;
+    [SerializeField] Button startYear;
+    [SerializeField] Button nextYear;
+    [SerializeField] Button Continue;
+    [SerializeField] Button backButton;
+    [SerializeField] Button nextLevel;
     
     [Header("Sliders")]
-    public Slider[] sliders;
+    [SerializeField] Slider[] sliders;
 
-    int Successes;
+    [SerializeField] int TargetMoney;
+    [SerializeField] int currentProfit;
+    [SerializeField] int totalProfit;
+    [SerializeField] int Successes;
     int index;
-    public int TargetMoney;
     int random;
 
     void Start()
@@ -34,18 +40,22 @@ public class Level : MonoBehaviour
         startYear.onClick.AddListener(() =>
         {
             //CollectedMoney = algorithm((int)Cuppuccino.value, (int)SpendingOnPromotion.value, (int)SalaryEmployee.value, (int)Trainingspending.value);
-            CollectedMoney = algorithm(sliders);
-            int starRate = Random.Range(0, employeeStars.Length);
+            currentProfit = (int)algorithm(sliders);
+            totalProfit += currentProfit;
+            int starRate = Random.Range(0, 5);
+            DecisionMaking.gameObject.SetActive(false);
+            Debug.Log(starRate);
             for (int i = 0; i < starRate; i++)
             {
                 employeeStars[i].SetActive(true);
+                customerStars[i].SetActive(true);
             }
             Debug.Log(CollectedMoney);
-            if (CollectedMoney >= TargetMoney)
+            if (currentProfit >= TargetMoney)
             {
                 Success();
             }
-            if (CollectedMoney < TargetMoney)
+            if (currentProfit < TargetMoney)
             {
                 Failed();
             }
@@ -54,8 +64,8 @@ public class Level : MonoBehaviour
         nextYear.onClick.AddListener(() =>
         {
             currentYear++;
-            random = Random.Range(0, News.Length);
-            if (currentYear > 6)
+            random = Random.Range(1, News.Length);
+            if (currentYear > 5)
             {
                 News[random].gameObject.SetActive(true);
             }
@@ -64,13 +74,19 @@ public class Level : MonoBehaviour
             FailSucUI.gameObject.SetActive(false);
             if (Successes >= 3)
             {
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+                NextLevel.gameObject.SetActive(true) ;
+                //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                employeeStars[i].SetActive(false);
+                customerStars[i].SetActive(false);
             }
         });
 
         Continue.onClick.AddListener(() =>
         {
-            if(currentYear > 6)
+            if(currentYear > 5)
             {
                 News[random].gameObject.SetActive(false);
             }
@@ -78,6 +94,18 @@ public class Level : MonoBehaviour
             DecisionMaking.gameObject.SetActive(true);
             Continue.gameObject.SetActive(false);
         });
+
+        backButton.onClick.AddListener(() =>
+        {
+            News[currentYear - 1].gameObject.SetActive(true);
+            Continue.gameObject.SetActive(true);
+        });
+
+        nextLevel.onClick.AddListener(() =>
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        });
+
     }
 
     void Update()
@@ -87,21 +115,29 @@ public class Level : MonoBehaviour
 
     public float algorithm(Slider[] test)
     {
-        float result = 0;
         for (int i = 0; i < test.Length; i++)
         {    
             float current = test[i].value;
-            if (i < test.Length - 1)
+            if (i ==0)
             {
-                float currentResult = current * test[i + 1].value;
-                result += currentResult;
+                float result = current * test[i + 1].value;
+                currentProfit = (int)result;
             }
-            else
+            if(i > 0)
             {
-                result = current * test[i].value;
+                //float result = current * profitMade;
+                currentProfit += (int)current * currentProfit;
             }
+            /*else
+            {
+                profitMade += (int)current * (int)test[i].value;
+            }*/
+
+            //In here I will be making required values for each year..and then i will check wih if statement how far they are from the required numbers
+            //After that it will determine if they are too less or too high on the numbers, it means its bad and will affect the results badly..
+            //If they are close enough to the numbers required, then it will have better results.
         }
-        return result * 10;
+        return currentProfit;
     }
     /*public int algorithm(int cuppuccinoPrice, int spendingOnPromo, int EmployeeSalary, int TrainSpending)
     {
@@ -111,14 +147,14 @@ public class Level : MonoBehaviour
     public void Success()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Profit Made: " + CollectedMoney;
+       // SucFail.text = "Profit Made: " + CollectedMoney;
         Successes += 1;
     }
 
     public void Failed()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Profit Made: " + CollectedMoney;
+       // SucFail.text = "Profit Made: " + CollectedMoney;
         Successes = 0;
     }
 }
