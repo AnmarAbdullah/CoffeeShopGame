@@ -2095,6 +2095,7 @@ GameObject:
   - component: {fileID: 284321615}
   - component: {fileID: 284321617}
   - component: {fileID: 284321616}
+  - component: {fileID: 284321618}
   m_Layer: 5
   m_Name: Panel - Newspaper (4)
   m_TagString: Untagged
@@ -2162,6 +2163,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 284321614}
   m_CullTransparentMesh: 1
+--- !u!114 &284321618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284321614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CappuccinoPrice: 5
+  SpendingOnPromotion: 5
+  EmployeesSalary: 0
+  TrainingSpending: 0
+  RoastingMachine: 0
+  HireOrFireStaff: 0
+  ServeFairTradeCoffee: 0
+  IncludeFoodItems: 0
+  OpenInEvenings: 0
 --- !u!1 &288001413
 GameObject:
   m_ObjectHideFlags: 0
@@ -4546,6 +4568,7 @@ GameObject:
   - component: {fileID: 563765365}
   - component: {fileID: 563765367}
   - component: {fileID: 563765366}
+  - component: {fileID: 563765368}
   m_Layer: 5
   m_Name: Panel - Newspaper (2)
   m_TagString: Untagged
@@ -4613,6 +4636,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 563765364}
   m_CullTransparentMesh: 1
+--- !u!114 &563765368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 563765364}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CappuccinoPrice: 5
+  SpendingOnPromotion: 5
+  EmployeesSalary: 0
+  TrainingSpending: 0
+  RoastingMachine: 0
+  HireOrFireStaff: 0
+  ServeFairTradeCoffee: 0
+  IncludeFoodItems: 0
+  OpenInEvenings: 0
 --- !u!1 &571480425
 GameObject:
   m_ObjectHideFlags: 0
@@ -6964,6 +7008,7 @@ GameObject:
   - component: {fileID: 903943305}
   - component: {fileID: 903943307}
   - component: {fileID: 903943306}
+  - component: {fileID: 903943308}
   m_Layer: 5
   m_Name: Panel - Newspaper (3)
   m_TagString: Untagged
@@ -7031,6 +7076,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 903943304}
   m_CullTransparentMesh: 1
+--- !u!114 &903943308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 903943304}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CappuccinoPrice: 4
+  SpendingOnPromotion: 4
+  EmployeesSalary: 0
+  TrainingSpending: 0
+  RoastingMachine: 0
+  HireOrFireStaff: 0
+  ServeFairTradeCoffee: 0
+  IncludeFoodItems: 0
+  OpenInEvenings: 0
 --- !u!1 &923284413
 GameObject:
   m_ObjectHideFlags: 0
@@ -7177,6 +7243,7 @@ GameObject:
   - component: {fileID: 950403315}
   - component: {fileID: 950403317}
   - component: {fileID: 950403316}
+  - component: {fileID: 950403318}
   m_Layer: 5
   m_Name: Panel - Newspaper (5)
   m_TagString: Untagged
@@ -7244,6 +7311,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950403314}
   m_CullTransparentMesh: 1
+--- !u!114 &950403318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950403314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CappuccinoPrice: 5
+  SpendingOnPromotion: 5
+  EmployeesSalary: 0
+  TrainingSpending: 0
+  RoastingMachine: 0
+  HireOrFireStaff: 0
+  ServeFairTradeCoffee: 0
+  IncludeFoodItems: 0
+  OpenInEvenings: 0
 --- !u!1 &1045931977
 GameObject:
   m_ObjectHideFlags: 0
@@ -7406,6 +7494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052657828}
   - component: {fileID: 1052657827}
+  - component: {fileID: 1052657829}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -7431,7 +7520,7 @@ MonoBehaviour:
   - {fileID: 903943304}
   - {fileID: 284321614}
   - {fileID: 950403314}
-  FailSucUI: {fileID: 427747375}
+  ResultsUI: {fileID: 427747375}
   customerStars:
   - {fileID: 1253676596}
   - {fileID: 734804908}
@@ -7446,7 +7535,7 @@ MonoBehaviour:
   - {fileID: 1476744589}
   DecisionMaking: {fileID: 1577188693}
   NextLevel: {fileID: 1950775867}
-  SucFail: {fileID: 742965744}
+  ProfitText: {fileID: 742965744}
   currentYear: 1
   CollectedMoney: 0
   startYear: {fileID: 326745110}
@@ -7454,12 +7543,11 @@ MonoBehaviour:
   Continue: {fileID: 837899465}
   backButton: {fileID: 1763802300}
   nextLevel: {fileID: 87265415}
-  sliders:
-  - {fileID: 1399847332}
-  - {fileID: 412656306}
   TargetMoney: 500
   currentProfit: 0
   totalProfit: 0
+  Successes: 0
+  reqs: {fileID: 0}
 --- !u!4 &1052657828
 Transform:
   m_ObjectHideFlags: 0
@@ -7475,6 +7563,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1052657829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052657826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb83c35aef08f644992f0a168a6cda75, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  reqs: {fileID: 0}
+  achieve: {fileID: 11400000, guid: 257f25767ca94854695f13912d709e6b, type: 2}
+  PriceOfCappuccino: {fileID: 1399847332}
+  SpendingOnPromotion: {fileID: 412656306}
 --- !u!1 &1064432244
 GameObject:
   m_ObjectHideFlags: 0
@@ -8728,6 +8832,7 @@ GameObject:
   - component: {fileID: 1340108981}
   - component: {fileID: 1340108983}
   - component: {fileID: 1340108982}
+  - component: {fileID: 1340108984}
   m_Layer: 5
   m_Name: Panel - Newspaper (1)
   m_TagString: Untagged
@@ -8770,7 +8875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.6792453, g: 0.5530883, b: 0.37486652, a: 0.98039216}
+  m_Color: {r: 0.6792453, g: 0.5530883, b: 0.37486652, a: 0.92156863}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -8795,6 +8900,27 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1340108980}
   m_CullTransparentMesh: 1
+--- !u!114 &1340108984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1340108980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CappuccinoPrice: 6
+  SpendingOnPromotion: 6
+  EmployeesSalary: 0
+  TrainingSpending: 0
+  RoastingMachine: 0
+  HireOrFireStaff: 0
+  ServeFairTradeCoffee: 0
+  IncludeFoodItems: 0
+  OpenInEvenings: 0
 --- !u!1 &1354587901
 GameObject:
   m_ObjectHideFlags: 0
@@ -12424,6 +12550,10 @@ PrefabInstance:
     - target: {fileID: 5317904940971928049, guid: d475489dd508b5b44892dab71e7270cf, type: 3}
       propertyPath: m_Name
       value: Sim Cafe - Level 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5317904940971928049, guid: d475489dd508b5b44892dab71e7270cf, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5317904940971928054, guid: d475489dd508b5b44892dab71e7270cf, type: 3}
       propertyPath: m_RootOrder
