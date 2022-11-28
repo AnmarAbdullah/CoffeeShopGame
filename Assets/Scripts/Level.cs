@@ -31,7 +31,7 @@ public class Level : MonoBehaviour
     [SerializeField] int TargetMoney;
     [SerializeField] int currentProfit;
     [SerializeField] int totalProfit;
-    int Successes;
+    [SerializeField] int Successes;
     int index;
     int random;
 
@@ -43,6 +43,7 @@ public class Level : MonoBehaviour
             currentProfit = (int)algorithm(sliders);
             totalProfit += currentProfit;
             int starRate = Random.Range(0, 5);
+            DecisionMaking.gameObject.SetActive(false);
             Debug.Log(starRate);
             for (int i = 0; i < starRate; i++)
             {
@@ -50,11 +51,11 @@ public class Level : MonoBehaviour
                 customerStars[i].SetActive(true);
             }
             Debug.Log(CollectedMoney);
-            if (CollectedMoney >= TargetMoney)
+            if (currentProfit >= TargetMoney)
             {
                 Success();
             }
-            if (CollectedMoney < TargetMoney)
+            if (currentProfit < TargetMoney)
             {
                 Failed();
             }
@@ -75,6 +76,11 @@ public class Level : MonoBehaviour
             {
                 NextLevel.gameObject.SetActive(true) ;
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+            for (int i = 0; i < 5; i++)
+            {
+                employeeStars[i].SetActive(false);
+                customerStars[i].SetActive(false);
             }
         });
 
@@ -131,7 +137,7 @@ public class Level : MonoBehaviour
             //After that it will determine if they are too less or too high on the numbers, it means its bad and will affect the results badly..
             //If they are close enough to the numbers required, then it will have better results.
         }
-        return currentProfit / 2;
+        return currentProfit;
     }
     /*public int algorithm(int cuppuccinoPrice, int spendingOnPromo, int EmployeeSalary, int TrainSpending)
     {
@@ -141,14 +147,14 @@ public class Level : MonoBehaviour
     public void Success()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Profit Made: " + CollectedMoney;
+       // SucFail.text = "Profit Made: " + CollectedMoney;
         Successes += 1;
     }
 
     public void Failed()
     {
         FailSucUI.gameObject.SetActive(true);
-        SucFail.text = "Profit Made: " + CollectedMoney;
+       // SucFail.text = "Profit Made: " + CollectedMoney;
         Successes = 0;
     }
 }
