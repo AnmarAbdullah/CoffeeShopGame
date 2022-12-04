@@ -7,7 +7,9 @@ using TMPro;
 public class GameScript : MonoBehaviour
 {
 
-    public float Money = 0;
+
+    //---------------------DEPRECATED SCRIPT-----------------------
+    /*public float Money = 0;
     public float MoneyAdded = 400;
     public int StartTimer = 1;
     public float Timer = 6;
@@ -46,5 +48,5 @@ public class GameScript : MonoBehaviour
     {
         StartTimer = 1;
     }
-
+    */
 }
