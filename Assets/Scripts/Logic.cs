@@ -9,14 +9,10 @@ public class Logic : MonoBehaviour
     [Header("General UI")]
     [SerializeField] GameObject[] News;
     [SerializeField] GameObject ResultsUI;
-    [SerializeField] GameObject[] customerStars;
-    [SerializeField] GameObject[] employeeStars;
     [SerializeField] GameObject DecisionMaking;
     [SerializeField] GameObject NextLevel;
 
-    [SerializeField] TextMeshProUGUI ProfitText;
     [SerializeField] int currentYear = 1;
-    [SerializeField] float CollectedMoney;
     
     [Header("Buttons")]
     [SerializeField] Button startYear;
@@ -26,8 +22,6 @@ public class Logic : MonoBehaviour
     [SerializeField] Button nextLevel;
     
     [Header("Sliders")]
-    //[SerializeField] Slider[] sliders;
-
     [SerializeField] int TargetMoney;
     [SerializeField] int currentProfit;
     [SerializeField] int totalProfit;
@@ -46,16 +40,11 @@ public class Logic : MonoBehaviour
         {
             //CollectedMoney = algorithm((int)Cuppuccino.value, (int)SpendingOnPromotion.value, (int)SalaryEmployee.value, (int)Trainingspending.value);
             currentProfit = reqs.Algorithm();
+            Debug.Log(currentProfit);
+            reqs.Results();
             totalProfit += currentProfit;
             int starRate = Random.Range(0, 5);
             DecisionMaking.gameObject.SetActive(false);
-            Debug.Log(starRate);
-            for (int i = 0; i < starRate; i++)
-            {
-                employeeStars[i].SetActive(true);
-                customerStars[i].SetActive(true);
-            }
-            Debug.Log(CollectedMoney);
             if (currentProfit >= TargetMoney)
             {
                 Success();
@@ -81,11 +70,6 @@ public class Logic : MonoBehaviour
             {
                 NextLevel.gameObject.SetActive(true) ;
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
-            for (int i = 0; i < 5; i++)
-            {
-                employeeStars[i].SetActive(false);
-                customerStars[i].SetActive(false);
             }
         });
 
@@ -144,14 +128,12 @@ public class Logic : MonoBehaviour
     public void Success()
     {
         ResultsUI.gameObject.SetActive(true);
-        ProfitText.text = "Profit Made: " + currentProfit;
         Successes += 1;
     }
 
     public void Failed()
     {
         ResultsUI.gameObject.SetActive(true);
-        ProfitText.text = "Profit Made: " + currentProfit;
         Successes = 0;
     }
 
