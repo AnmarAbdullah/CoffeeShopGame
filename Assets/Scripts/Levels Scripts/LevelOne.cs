@@ -23,10 +23,10 @@ public class LevelOne : Level
 
     public override void Results()
     {
-        for (int i = 0; i < Random.Range(1,5); i++)
+        /*for (int i = 0; i < Random.Range(1,5); i++)
         {
             CustomerSatisfaction.transform.GetChild(i).gameObject.SetActive(true);
-        }
+        }*/
         ProfitMadeText.text = $"Profit Made: {profitMade}";
         NumberOfDrinksSold.text = $"Number Of Drinks Sold: {achieve.cur_SoldDrinks}";
         Revenue.text = $"Revenue: {achieve.cur_Revenues}";

@@ -1437,16 +1437,16 @@ RectTransform:
   m_GameObject: {fileID: 87265413}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.32240596, y: 0.6576993, z: 0}
+  m_LocalScale: {x: 4.5426383, y: 4.9556055, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 714270276}
-  m_Father: {fileID: 1950775868}
-  m_RootOrder: 1
+  m_Father: {fileID: 1059845906}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 16.1}
+  m_AnchoredPosition: {x: -1573.2235, y: 106.6271}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87265415
@@ -3376,7 +3376,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 07547b3fb42397543a37497fd736d6d1, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 07547b3fb42397543a37497fd736d6d1, type: 3}
       propertyPath: m_LocalScale.x
@@ -4367,13 +4367,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetProfit: 0
   CappuccinoPrice: 5
   SpendingOnPromotion: 5
   EmployeesSalary: 0
   TrainingSpending: 0
+  ServeFairTradeCoffee: 0
+  ServeOrganicCoffee: 0
   RoastingMachine: 0
   HireOrFireStaff: 0
-  ServeFairTradeCoffee: 0
   IncludeFoodItems: 0
   OpenInEvenings: 0
 --- !u!1 &285944399
@@ -6726,7 +6728,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: df2f568d2f9cae54987c0fdaebc5e4a9, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: df2f568d2f9cae54987c0fdaebc5e4a9, type: 3}
       propertyPath: m_LocalScale.x
@@ -9412,13 +9414,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetProfit: 0
   CappuccinoPrice: 5
   SpendingOnPromotion: 5
   EmployeesSalary: 0
   TrainingSpending: 0
+  ServeFairTradeCoffee: 0
+  ServeOrganicCoffee: 0
   RoastingMachine: 0
   HireOrFireStaff: 0
-  ServeFairTradeCoffee: 0
   IncludeFoodItems: 0
   OpenInEvenings: 0
 --- !u!1 &570435150
@@ -12698,7 +12702,7 @@ RectTransform:
   - {fileID: 181422606}
   - {fileID: 1064231026}
   m_Father: {fileID: 1950775868}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -13904,13 +13908,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetProfit: 0
   CappuccinoPrice: 4
   SpendingOnPromotion: 4
   EmployeesSalary: 0
   TrainingSpending: 0
+  ServeFairTradeCoffee: 0
+  ServeOrganicCoffee: 0
   RoastingMachine: 0
   HireOrFireStaff: 0
-  ServeFairTradeCoffee: 0
   IncludeFoodItems: 0
   OpenInEvenings: 0
 --- !u!1 &915943696
@@ -14274,13 +14280,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetProfit: 0
   CappuccinoPrice: 5
   SpendingOnPromotion: 5
   EmployeesSalary: 0
   TrainingSpending: 0
+  ServeFairTradeCoffee: 0
+  ServeOrganicCoffee: 0
   RoastingMachine: 0
   HireOrFireStaff: 0
-  ServeFairTradeCoffee: 0
   IncludeFoodItems: 0
   OpenInEvenings: 0
 --- !u!1 &964131013
@@ -15368,26 +15376,12 @@ MonoBehaviour:
   - {fileID: 903943304}
   - {fileID: 284321614}
   - {fileID: 950403314}
-  ResultsUI: {fileID: 427747375}
-  customerStars:
-  - {fileID: 1253676596}
-  - {fileID: 734804908}
-  - {fileID: 128958608}
-  - {fileID: 485692610}
-  - {fileID: 1880052834}
-  employeeStars:
-  - {fileID: 1929564400}
-  - {fileID: 22627435}
-  - {fileID: 623877403}
-  - {fileID: 1802744480}
-  - {fileID: 1476744589}
+  ResultsUI: {fileID: 559440397}
   DecisionMaking: {fileID: 1577188693}
-  NextLevel: {fileID: 1950775867}
-  ProfitText: {fileID: 742965744}
+  NextLevel: {fileID: 1059845905}
   currentYear: 1
-  CollectedMoney: 0
   startYear: {fileID: 326745110}
-  nextYear: {fileID: 282440890}
+  nextYear: {fileID: 479903262}
   Continue: {fileID: 837899465}
   backButton: {fileID: 1763802300}
   nextLevel: {fileID: 87265415}
@@ -15423,10 +15417,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb83c35aef08f644992f0a168a6cda75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  profitMade: 0
   reqs: {fileID: 0}
   achieve: {fileID: 11400000, guid: 257f25767ca94854695f13912d709e6b, type: 2}
+  CustomerSatisfaction: {fileID: 636221188}
   PriceOfCappuccino: {fileID: 1399847332}
   SpendingOnPromotion: {fileID: 412656306}
+  NumberOfDrinksSold: {fileID: 487366023}
+  Revenue: {fileID: 2044659307}
+  ProfitMadeText: {fileID: 547914742}
 --- !u!1 &1059845905
 GameObject:
   m_ObjectHideFlags: 0
@@ -15459,6 +15458,7 @@ RectTransform:
   m_Children:
   - {fileID: 915943697}
   - {fileID: 1568412918}
+  - {fileID: 87265414}
   m_Father: {fileID: 1598842959}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -18537,7 +18537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1340108981
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18610,13 +18610,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29da3686b974e094e877a7f16ebaea47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetProfit: 6
   CappuccinoPrice: 6
   SpendingOnPromotion: 6
   EmployeesSalary: 0
   TrainingSpending: 0
+  ServeFairTradeCoffee: 0
+  ServeOrganicCoffee: 0
   RoastingMachine: 0
   HireOrFireStaff: 0
-  ServeFairTradeCoffee: 0
   IncludeFoodItems: 0
   OpenInEvenings: 0
 --- !u!1 &1346234714
@@ -21837,6 +21839,7 @@ RectTransform:
   - {fileID: 276784669}
   - {fileID: 837899464}
   - {fileID: 1059845906}
+  - {fileID: 1950775868}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24563,14 +24566,13 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1796402431}
-  - {fileID: 87265414}
   - {fileID: 788592713}
-  m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_Father: {fileID: 1598842959}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 127.89659, y: 134.5294}
+  m_AnchoredPosition: {x: -832.1034, y: -405.47058}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950775869
