@@ -4,15 +4,13 @@ using UnityEngine.UI;
 
 public class LevelFour : Level
 {
+    [Space(5)]
+    [Header("Decisions Of This Level")]
     [SerializeField] Slider PriceOfCappuccino;
     [SerializeField] Slider SpendingOnPromotion;
     [SerializeField] Slider SalaryOfEmployee;
     [SerializeField] Slider SpendingOnTraining;
     [SerializeField] Toggle ServeFairTradeCoffee;
-    [SerializeField] TextMeshProUGUI NumberOfDrinksSold;
-    [SerializeField] TextMeshProUGUI Revenue;
-    [SerializeField] TextMeshProUGUI Cost;
-    [SerializeField] TextMeshProUGUI ProfitMadeText;
 
     public override int Algorithm()
     {
@@ -29,11 +27,16 @@ public class LevelFour : Level
         profitMade = result * 10;
         return profitMade; //talking to someone
     }
-    public override void Results()
+    /*public override void Results()
     {
+        for (int i = 0; i < Random.Range(1, 5); i++)
+        {
+            CustomerSatisfaction.transform.GetChild(i).gameObject.SetActive(true);
+            EmployeeSatisfaction.transform.GetChild(i).gameObject.SetActive(true);
+        }
         ProfitMadeText.text = $"Profit Made: {profitMade}";
         NumberOfDrinksSold.text = $"Number Of Drinks Sold: {achieve.cur_SoldDrinks}";
         Revenue.text = $"Revenue: {achieve.cur_Revenues}";
         Cost.text = $"Cost: {achieve.cur_Costs}";
-    }
+    }*/
 }

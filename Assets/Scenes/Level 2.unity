@@ -1476,12 +1476,14 @@ MonoBehaviour:
   profitMade: 0
   reqs: {fileID: 0}
   achieve: {fileID: 11400000, guid: 257f25767ca94854695f13912d709e6b, type: 2}
-  CustomerSatisfaction: {fileID: 0}
-  PriceOfCappuccino: {fileID: 6194553425558507514}
-  SpendingOnPromotion: {fileID: 6194553426531114578}
+  CustomerSatisfaction: {fileID: 1738388177}
+  EmployeeSatisfaction: {fileID: 1614778800}
   NumberOfDrinksSold: {fileID: 875855952}
   Revenue: {fileID: 796403550}
   ProfitMadeText: {fileID: 1115370890}
+  Cost: {fileID: 288221597}
+  PriceOfCappuccino: {fileID: 6194553425558507514}
+  SpendingOnPromotion: {fileID: 6194553426531114578}
 --- !u!1 &288221595
 GameObject:
   m_ObjectHideFlags: 0
