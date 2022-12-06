@@ -4390,7 +4390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &108840459
 RectTransform:
   m_ObjectHideFlags: 0
@@ -22532,6 +22532,7 @@ MonoBehaviour:
   totalProfit: 0
   Successes: 0
   reqs: {fileID: 0}
+  level: 8
 --- !u!4 &588302608
 Transform:
   m_ObjectHideFlags: 0
@@ -24187,7 +24188,7 @@ RectTransform:
   - {fileID: 758587699}
   - {fileID: 720087537}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -44584,7 +44585,7 @@ RectTransform:
   m_Children:
   - {fileID: 1088370775}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -51340,8 +51341,8 @@ RectTransform:
   - {fileID: 939353680}
   - {fileID: 1836274578}
   - {fileID: 1396844751}
-  - {fileID: 651871381}
   - {fileID: 1213974544}
+  - {fileID: 651871381}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

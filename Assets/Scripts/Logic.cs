@@ -28,12 +28,13 @@ public class Logic : MonoBehaviour
     [SerializeField] int Successes;
 
     [SerializeField] Level reqs;
-    int level;
+    public int level;
     int index;
     int random;
 
     void Start()
     {
+        SaveSystem.SavePlayer(this);
         reqs = GetComponent<Level>();
         BaseAchievements();
         startYear.onClick.AddListener(() =>
@@ -108,7 +109,7 @@ public class Logic : MonoBehaviour
 
     void BaseAchievements()
     {
-        level = reqs.achieve.Level;
+        //level = reqs.achieve.Level;
         reqs.achieve.cur_SoldDrinks = reqs.achieve.SoldDrinks;
         reqs.achieve.cur_Revenues = reqs.achieve.Revenues;
         reqs.achieve.cur_Costs = reqs.achieve.Costs;

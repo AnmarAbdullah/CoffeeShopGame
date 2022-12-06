@@ -1447,6 +1447,7 @@ MonoBehaviour:
   totalProfit: 0
   Successes: 0
   reqs: {fileID: 0}
+  level: 6
 --- !u!4 &57311576
 Transform:
   m_ObjectHideFlags: 0
@@ -9922,7 +9923,7 @@ RectTransform:
   - {fileID: 1752328408}
   - {fileID: 1661714288}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -37731,8 +37732,8 @@ RectTransform:
   - {fileID: 1467089506}
   - {fileID: 1565536967}
   - {fileID: 56069829}
-  - {fileID: 382593394}
   - {fileID: 1583364758}
+  - {fileID: 382593394}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -44914,7 +44915,7 @@ RectTransform:
   m_Children:
   - {fileID: 311798744}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}

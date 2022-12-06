@@ -2106,7 +2106,7 @@ RectTransform:
   m_Children:
   - {fileID: 1811086060}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
@@ -25976,14 +25976,14 @@ RectTransform:
   m_GameObject: {fileID: 1035419509}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.53273, y: 0.53273, z: 0.53273}
+  m_LocalScale: {x: 0.53273, y: 0.53273, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1097768978}
   - {fileID: 1223797574}
   - {fileID: 1610129315}
   m_Father: {fileID: 1364387578}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -33792,8 +33792,8 @@ RectTransform:
   - {fileID: 576599096}
   - {fileID: 390616108}
   - {fileID: 59807885}
-  - {fileID: 1035419510}
   - {fileID: 82452275}
+  - {fileID: 1035419510}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -53235,6 +53235,7 @@ MonoBehaviour:
   totalProfit: 0
   Successes: 0
   reqs: {fileID: 0}
+  level: 7
 --- !u!4 &1978476838
 Transform:
   m_ObjectHideFlags: 0
