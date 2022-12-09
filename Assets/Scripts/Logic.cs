@@ -119,8 +119,6 @@ public class Logic : MonoBehaviour
         {
             PauseMenu.SetActive(false);
         }
-
-
     }
 
     void BaseAchievements()
@@ -185,9 +183,6 @@ public class Logic : MonoBehaviour
                 profitMade += (int)current * (int)test[i].value;
             }
 
-            //In here I will be making required values for each year..and then i will check wih if statement how far they are from the required numbers
-            //After that it will determine if they are too less or too high on the numbers, it means its bad and will affect the results badly..
-            //If they are close enough to the numbers required, then it will have better results.
         }
         return currentProfit;
     }*/

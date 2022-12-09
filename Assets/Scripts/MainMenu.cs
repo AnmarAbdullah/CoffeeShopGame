@@ -22,8 +22,7 @@ public class MainMenu : MonoBehaviour
         for (int i = 0; i < lastLevelReached; i++)
         {
             if (i == lastLevelReached) continue;
-            unlockLevel[i].gameObject.SetActive(false);
-            
+            unlockLevel[i].gameObject.SetActive(false);        
         }
     }
 
