@@ -48,14 +48,11 @@ public class Logic : MonoBehaviour
             totalProfit += currentProfit;
             int starRate = Random.Range(0, 5);
             DecisionMaking.gameObject.SetActive(false);
-            if (currentProfit >= TargetMoney)
+            if (totalProfit >= TargetMoney)
             {
-                Success();
+                NextLevel.gameObject.SetActive(true);
             }
-            if (currentProfit < TargetMoney)
-            {
-                Failed();
-            }
+            Success();
         });
         
         nextYear.onClick.AddListener(() =>
@@ -69,11 +66,11 @@ public class Logic : MonoBehaviour
             else News[currentYear - 1].gameObject.SetActive(true);
             Continue.gameObject.SetActive(true);
             ResultsUI.gameObject.SetActive(false);
-            if (Successes >= 3)
+            /*if (Successes >= 3)
             {
                 NextLevel.gameObject.SetActive(true) ;
                 //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-            }
+            }*/
         });
 
         Continue.onClick.AddListener(() =>

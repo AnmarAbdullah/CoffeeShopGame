@@ -12297,9 +12297,9 @@ MonoBehaviour:
   startYear: {fileID: 1650688586}
   nextYear: {fileID: 1088519627}
   Continue: {fileID: 1458324685}
-  backButton: {fileID: 72835586}
+  backButton: {fileID: 1283671470}
   nextLevel: {fileID: 375452308}
-  TargetMoney: 0
+  TargetMoney: 140000
   currentProfit: 0
   totalProfit: 0
   Successes: 0

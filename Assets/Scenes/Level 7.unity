@@ -54057,7 +54057,7 @@ MonoBehaviour:
   Continue: {fileID: 82452276}
   backButton: {fileID: 679182096}
   nextLevel: {fileID: 1610129316}
-  TargetMoney: 0
+  TargetMoney: 170000
   currentProfit: 0
   totalProfit: 0
   Successes: 0
