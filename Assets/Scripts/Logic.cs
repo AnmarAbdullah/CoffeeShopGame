@@ -11,6 +11,8 @@ public class Logic : MonoBehaviour
     [SerializeField] GameObject ResultsUI;
     [SerializeField] GameObject DecisionMaking;
     [SerializeField] GameObject NextLevel;
+    [SerializeField] GameObject PauseMenu;
+    bool paused;
 
     [SerializeField] int currentYear = 1;
     
@@ -105,6 +107,20 @@ public class Logic : MonoBehaviour
         {
             ScaleBaseAchievements();
         }
+        if(Input.GetKeyDown(KeyCode.Escape)) 
+        {
+            paused = !paused;
+        }
+        if (paused)
+        {
+            PauseMenu.SetActive(true);
+        }
+        if (!paused)
+        {
+            PauseMenu.SetActive(false);
+        }
+
+
     }
 
     void BaseAchievements()
@@ -136,6 +152,15 @@ public class Logic : MonoBehaviour
     {
         ResultsUI.gameObject.SetActive(true);
         Successes = 0;
+    }
+
+    public void BackToMainMenu() 
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+    public void Resume()
+    {
+        paused = !paused;
     }
 
     //--------------------------------DEPRACATED-------------------------------
